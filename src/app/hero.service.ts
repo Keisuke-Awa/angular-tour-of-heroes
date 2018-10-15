@@ -14,11 +14,10 @@ export class HeroService {
   constructor(
     private http: HttpClient,
     private messageService: MessageService) { }
-  
-  private heroesUrl = 'api/heroes';  // Web APIのURL
+    private heroesUrl = 'api/heroes';  // Web APIのURL
 
-  getHeroes (): Observable<Hero[]> {
-    return this.http.get<Hero[]>(this.heroesUrl)
+    getHeroes (): Observable<Hero[]> {
+      return this.http.get<Hero[]>(this.heroesUrl);
   }
 
   getHero(id: number): Observable<Hero> {
